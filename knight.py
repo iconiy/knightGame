@@ -12,8 +12,12 @@ class Knight:
         self.image = pygame.image.load("myknight.png")
         self.rect = self.image.get_rect()
 
-        self.rect.centerx = self.screen_rect.centerx
-        self.rect.centery = self.screen_rect.centery
+        # self.rect.centerx = self.screen_rect.centerx
+        # self.rect.centery = self.screen_rect.centerx
+
+        # Set Knights starting position
+        self.rect.x = 0
+        self.rect.y = 400
 
         self.x = float(self.rect.x)
         self.y = float(self.rect.y)
@@ -30,10 +34,10 @@ class Knight:
             self.y -= self.settings.knight_speed
         if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
             self.y += self.settings.knight_speed
-        if self.moving_left and self.rect.left > 0:
-            self.x -= self.settings.knight_speed
-        if self.moving_right and self.rect.right < self.screen_rect.right:
-            self.x += self.settings.knight_speed
+        # if self.moving_left and self.rect.left > 0:
+        #     self.x -= self.settings.knight_speed
+        # if self.moving_right and self.rect.right < self.screen_rect.right:
+        #     self.x += self.settings.knight_speed
 
         self.rect.x = self.x
         self.rect.y = self.y

@@ -3,6 +3,7 @@ import pygame
 
 from settings import Settings
 from knight import Knight
+from sword import Sword
 
 class Knightgame:
     """Setup Game"""
@@ -39,20 +40,22 @@ class Knightgame:
     def _check_keydown_events(self, event):
         if event.key == pygame.K_ESCAPE:
             sys.exit()
-        if event.key == pygame.K_RIGHT:
-            self.knight.moving_right = True
-        if event.key == pygame.K_LEFT:
-            self.knight.moving_left = True
+        # Removing these keybinds for now
+        # if event.key == pygame.K_RIGHT:
+        #     self.knight.moving_right = True
+        # if event.key == pygame.K_LEFT:
+        #     self.knight.moving_left = True
         if event.key == pygame.K_UP:
             self.knight.moving_up = True
         if event.key == pygame.K_DOWN:
             self.knight.moving_down = True
 
     def _check_keyup_events(self, event):
-        if event.key == pygame.K_RIGHT:
-            self.knight.moving_right = False
-        if event.key == pygame.K_LEFT:
-            self.knight.moving_left = False
+        # Removing these keybinds for now
+        # if event.key == pygame.K_RIGHT:
+        #     self.knight.moving_right = False
+        # if event.key == pygame.K_LEFT:
+        #     self.knight.moving_left = False
         if event.key == pygame.K_UP:
             self.knight.moving_up = False
         if event.key == pygame.K_DOWN:
